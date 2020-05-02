@@ -1,0 +1,51 @@
+/* Effects the sizing and font of every element */
+* {
+	box-sizing: border-box;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/* Gets rid of underlined hyperlinks until hovering over */
+a.hyper:link{
+	text-decoration:none;
+}
+a.hyper:hover{
+	text-decoration:underline;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+/* Adds a dark grey background color to the header */
+header{
+	position: fixed;
+	top: 0;
+    left: 0;
+	right: 0;
+	height: 60px;
+	background: black;
+	opacity: 0.85;
+	display: flex;
+  	justify-content: space-between;
+}
+/* Styles text inside the header */
+header h2{
+  	padding-left: 30px;
+	color: white;
+}
+header li{
+	display: inline-block;
+}
+header img{
+	padding: 0 0 5px 5px; 
+	height: 40px;
+}	
+.facebook img{
+	padding-right: 35px;
+}
+footer{
+    left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100px;
+	background: black;
+	opacity: 0.95;
+}
