@@ -45,19 +45,19 @@ header img{
 }
 .row{
 	display: grid;
-	grid-template-rows: 60px 350px;
+	grid-template-rows: 60px 350px 150px;
 	grid-template-columns: auto 60% 30% auto;
 }
 .introduction{
-	padding-right: 25px;
 	grid-area: 2/2/3/3;
 }
 .picture{
 	grid-area: 2/3/3/4;
+	padding-left: 40px;
 }
 .picture img{
 	display: block;
-	max-height: 350px;
+	max-height: 300px;
 	width: auto;
 }
 footer{
