@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 /* Effects the sizing and font of every element */
 * {
 	box-sizing: border-box;
@@ -9,14 +10,26 @@ a.hyper:link{
 a.hyper:hover{
 	text-decoration:underline;
 }
-h2{
+h3{
 	font-weight: normal;
+	font-size: 1.5vw;
+}
+@media(max-width: 850px){
+	h3{
+		font-size: 0.8em;
+	}
 }
 body{
+	font-family: "Montserrat", sans-serif;
 	margin: 0;
 	padding: 0;
+	position: relative;
+  	min-height: 100vh;
 }
 header{
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
 	position: fixed;
 	top: 0;
     left: 0;
@@ -24,20 +37,18 @@ header{
 	height: 60px;
 	background: black;
 	opacity: 0.85;
-	display: flex;
-  	justify-content: space-between;
-  	align-items: center;
 }
 header h2{
   	padding-left: 30px;
 	color: white;
 }
 header ul{
+	display: flex;
+	list-style-type: none;
 	padding-top: 7px;
 }
 header li {
-    display: inline-block;
-    padding: 0px 2px;
+    padding: 0px 5px;
   }
 header img{ 
 	height: 40px;
@@ -45,57 +56,111 @@ header img{
 #facebook img{
 	padding-right: 30px;
 }
-#row1{
+#container{
+	padding-top: 10px;
+  	padding-bottom: 120px;
 	display: grid;
-	grid-template-rows: 30px 300px;
-	grid-template-columns: auto 60% 30% auto;
+	grid-template-rows: repeat(2, 300px);
+	grid-template-columns: 1fr 8fr 2fr 8fr 1fr;
+	grid-row-gap: 25px;
+}
+@media(max-width: 850px){
+	#container{
+		padding-top: 10px;
+	  	padding-bottom: 120px;
+	  	grid-template-rows: repeat(2, 300px 200px);
+	  	grid-template-columns: 2fr 8fr 2fr;
+	  	grid-row-gap: 0px;
+	  	justify-items: center;
+	}
 }
 .introduction{
+	grid-area: 1/2/2/4;
 	margin-top: 20px;
-	grid-area: 2/2/3/3;
+}
+@media(max-width: 850px){
+	.introduction{
+		grid-area: 2/2/3/3;
+		text-align: center;
+	}
 }
 #headshot{
-	grid-area: 2/3/3/4;
-	padding-left: 20px;
+	grid-area: 1/4/2/5;
+	padding-left: 50px;
+}
+@media(max-width: 850px){
+	#headshot{
+		grid-area: 1/2/2/3;
+	}
 }
 #headshot img{
 	display: block;
 	max-height: 300px;
 	width: auto;
 }
-#row2{
-	display: grid;
-	grid-template-rows: 40px 300px 150px;
-	grid-template-columns: 75px 2fr 3fr 75px 75px;
-}
 #leftarrow{
 	grid-area: 2/1/3/2;
 	background: rgb(236,228,228);
+	justify-self: right;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-#rightarrow{
-	grid-area: 2/4/3/5;
-	background: rgb(236,228,228);
+@media(max-width: 850px){
+	#leftarrow{
+		grid-area: 3/1/5/2;
+		min-width: 80%;
+	}
 }
 .slidepic{
 	grid-area: 2/2/3/3;
 	padding: 40px 60px;
 	background: rgb(236,228,228);
+	justify-self: stretch;
+}
+@media(max-width: 850px){
+	.slidepic{
+		grid-area: 3/2/4/3;
+	}
 }
 .slidepic img{
-	display: block;
 	max-height: 220px;
 	width: auto;
 }
 .slidetext{
+	grid-area: 2/3/3/5;
+	height: 300px;
 	padding: 75px 50px;
-	grid-area: 2/3/3/4;
 	background: rgb(236,228,228);
+}
+@media(max-width: 850px){
+	.slidetext{
+		grid-area: 4/2/5/3;
+		height: 200px;
+		align-items: center;
+	}
+}
+#rightarrow{
+	grid-area: 2/5/3/6;
+	background: rgb(236,228,228);
+	justify-self: left;
+	min-width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@media(max-width: 850px){
+	#rightarrow{
+		grid-area: 3/3/5/4;
+		min-width: 80%;
+	}
 }
 footer{
 	position: absolute;
-	width: 100%;
-	height: 100px;
+  	bottom: 0;
+  	width: 100%;
+  	height: 100px;
 	background: black;
 	opacity: 0.95;
 }
