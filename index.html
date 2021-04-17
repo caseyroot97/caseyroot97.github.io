@@ -4,53 +4,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 	 	<!-- Name of webpage on browser tab -->
-		<title>Casey Root</title>
+		<title>Casey Root's Website</title>
 		<!-- Need to finish this!!!!!!        v v v v v v    -->
 		<meta name="description" content="This is the description">
 		<!-- Link to css file -->
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<header>
+		<header class="header">
 			<h2>Casey Root</h2>
 			<ul>
 				<li id="linkedin">
 					<a href="https://www.linkedin.com/in/casey-root/" target="_blank">
-						<img src="Images/Linkedin Logo.png" alt="Linkedin Logo"></a></li>
+						<img src="Images/Linkedin Logo.png" alt="Linkedin Logo">
+					</a>
+				</li>
 				<li id="github">
 					<a href="https://github.com/caseyroot97?tab=repositories" target="_blank">
-						<img src="Images/GitHub Logo.png" alt="GitHub Logo"></a></li>
+						<img src="Images/GitHub Logo.png" alt="GitHub Logo">
+					</a>
+				</li>
 				<li id="facebook">
 					<a href="https://www.facebook.com/casey.root.5" target="_blank">
-						<img src="Images/Facebook Logo.png" alt="Facebook Logo"></a></li>
+						<img src="Images/Facebook Logo.png" alt="Facebook Logo">
+					</a>
+				</li>
 			</ul>
 		</header>
-		<div id="header"></div>
+		<div class="header" id="header"></div>
+
 		<div id=container>
 			<div id="intro">
 				<div id="introductionText">
-					<h1>Welcome to My Website!</h1>
+					<h1>Welcome to my website!</h1>
 					<h3>My name&#39s Casey and I&#39m from Austin, Texas. I&#39m currently a senior at Texas Tech University studying Computer Science.</h3>
 					<h3>Please take some time to check out <a class="hyper" href="Resume.pdf" target="_blank">my resume</a>.</h3>
 				</div>
-				<div id="introductionPic">
-		    		<img src="Images/Casey Professional Headshot.jpg" alt="Casey Professional Headshot">
-		    	</div>
+	    		<img id="introductionPic" src="Images/Casey Professional Headshot.jpg" alt="Casey Professional Headshot">
 		    </div>
 
 	    	<div id=carouselBanner>
-				<button id=leftarrow>&#10094;</button>
-				<div class="carouselPic" id="austinPic">
-					<img src="Images/Austin.jpg" alt="Austin, TX">
+				<button id=leftarrow onclick="previousSlide()"">&#10094;</button>
+
+				<div class="carousel">
+					<img class="carouselPic" src="Images/Austin.jpg" alt="Austin, TX">
+					<h3 class="carouselText">I was born and raised in Austin, Texas. At a young age I was introduced to Cub Scouts and Lacrosse where I learned many team building and leadership skills. I wouldn’t be the person I am today if it weren’t for this.</h3>
 				</div>
-				<div class="carouselText" id="austinText">
-					<h3>I was born and raised in Austin, Texas. At a young age I was introduced to Cub Scouts and Lacrosse where I learned many team building and leadership skills. I wouldn’t be the person I am today if it weren’t for this.</h3>
+
+				<div class="carousel hidden">
+					<img class="carouselPic" src="Images/Anderson HS.jpg" alt="Anderson HS">
+					<h3 class="carouselText">I graduated from L.C. Anderson High School in May of 2016. I was very involved with the lacrosse team and the art department as well as being a member of the math honor society Mu Alpha Theta.</h3>
 				</div>
-				<button id=rightarrow>&#10095;</button>
+
+				<div class="carousel hidden">
+					<img class="carouselPic" src="Images/Texas Tech.jpg" alt="Texas Tech">
+					<h3 class="carouselText">I’m currently enrolled in Texas Tech University where I am involved in multiple organizations from machine learning to greek life. I try to take advantage of every resource this amazing university has to offer.</h3>
+				</div>
+
+				<div class="carousel hidden">
+					<img class="carouselPic" src="Images/Code on Screen.jpg" alt="Code">
+					<h3 class="carouselText">I’m studying Computer Science with a minor in mathematics. When I started college I was very interested in finding something I am passionate about. I started out studying Electrical Engineering but quickly found out that I have much more interest in programming and the software aspect of computers.</h3>
+				</div>
+
+				<button id=rightarrow onclick="nextSlide()">&#10095;</button>
+				<div id="dots">
+				  <span class="dot active" onclick="toSlide(0)"></span> 
+				  <span class="dot" onclick="toSlide(1)"></span> 
+				  <span class="dot" onclick="toSlide(2)"></span> 
+				  <span class="dot" onclick="toSlide(3)"></span>
+				</div>
 			</div>
 		</div>
 
-		<div id="footer"></div>
-		<footer></footer>
+		<div class="footer" id="footer"></div>
+		<footer class="footer"></footer>
+
+		<script src="home_page.js"></script>
+
 	</body>	
 </html>
