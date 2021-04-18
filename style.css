@@ -14,7 +14,7 @@ h3{
 	font-weight: normal;
 	font-size: 0.8em;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	h3{
 		font-size: 1.35vw;
 	}
@@ -74,7 +74,7 @@ header img{
 	display: grid;
 	grid-row: 1;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	#intro{
 		padding: 40px;
 	}
@@ -86,7 +86,7 @@ header img{
 	text-align: center;
 	place-self: center;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	#introductionText{
 		width: 50vw;
 		grid-row: 1;
@@ -101,7 +101,7 @@ header img{
 	padding-top: 20px;
 	justify-self: center;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	#introductionPic{
 		grid-column: 3;
 		padding-left: 10px;
@@ -132,7 +132,7 @@ button{
 	display: grid;
 	height: calc(420px - (1/7 * 90vw));
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	.carousel{
 		height: auto;
 	}
@@ -145,7 +145,7 @@ button{
 	width: 300px;
 	justify-self: center;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	.carouselPic{
 		grid-column: 1;
 		padding: 30px 30px 20px 60px;
@@ -159,7 +159,7 @@ button{
 	height: 145px;
 	padding: 0px 50px 5px;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	.carouselText{
 		grid-column: 2;
 		grid-row: 1;
@@ -212,7 +212,7 @@ footer{
 footer, #footer{
 	height: 75px;
 }
-@media(min-width: 415px){
+@media(min-width: 775px){
 	footer, #footer{
 		height: 100px;
 	}
