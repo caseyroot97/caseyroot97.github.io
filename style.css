@@ -12,11 +12,11 @@ a.hyper:hover{
 }
 h3{
 	font-weight: normal;
-	font-size: 1.5vw;
+	font-size: 0.8em;
 }
-@media(max-width: 850px){
+@media(min-width: 768px){
 	h3{
-		font-size: 0.8em;
+		font-size: 1.35vw;
 	}
 }
 body{
@@ -53,15 +53,15 @@ header li {
 header img{ 
 	height: 40px;
 }	
-#header{
-	height: 60px;
-}
 #facebook img{
 	padding-right: 30px;
 }
 .header{
 	grid-column: 1 / 3;
 	grid-row: 1;
+}
+#header{
+	height: 60px;
 }
 
 #container{
@@ -73,31 +73,42 @@ header img{
 #intro{
 	display: grid;
 	grid-row: 1;
-	margin: 40px 100px;
+}
+@media(min-width: 768px){
+	#intro{
+		padding: 40px;
+	}
 }
 #introductionText{
-	grid-column: 2;
-	margin-top: 20px;
+	grid-row: 2;
+	width: 90vw;
+	padding: 0 20px 10px;
+	text-align: center;
+	place-self: center;
 }
-@media(max-width: 850px){
+@media(min-width: 768px){
 	#introductionText{
-		grid-row: 2;
-		width: 500px;
+		width: 50vw;
+		grid-row: 1;
+		padding-top: 20px;
+		text-align: left;
 	}
 }
 #introductionPic{
-	grid-column: 3;
-	padding-left: 50px;
-	max-height: 300px;
-	width: auto;
+	grid-row: 1;
+	grid-column: 1 / 3;
+	height: 200px;
+	padding-top: 20px;
+	justify-self: center;
 }
-@media(max-width: 850px){
+@media(min-width: 768px){
 	#introductionPic{
-		grid-row: 1;
-		grid-column: 1 / 3;
-		height: 200px;
-		padding-left: 0;
-		justify-self: center;
+		grid-column: 3;
+		padding-left: 10px;
+		height: auto;
+		max-height: 300px;
+		width: auto;
+		justify-self: left;
 	}
 }
 
@@ -105,7 +116,7 @@ header img{
 	background-color: rgb(236,228,228);
 	grid-row: 3;
 	display: grid;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 button{
 	background-color: rgb(236,228,228);
@@ -119,34 +130,41 @@ button{
 .carousel{
 	grid-column: 2;
 	display: grid;
+	height: calc(420px - (1/7 * 90vw));
+}
+@media(min-width: 768px){
+	.carousel{
+		height: auto;
+	}
 }
 .carouselPic{
-	grid-column: 1;
-	padding: 30px 30px 5px 60px;
-	height: 250px;
-	width: 450px;
+	grid-row: 1;
+	padding-top: 30px;
+	padding-bottom: 5px;
+	height: 200px;
+	width: 300px;
+	justify-self: center;
 }
-@media(max-width: 850px){
+@media(min-width: 768px){
 	.carouselPic{
-		grid-row: 1;
-		padding-top: 30px;
-		padding-bottom: 5px;
-		height: 200px;
-		width: 350px;
-		justify-self: center;
+		grid-column: 1;
+		padding: 30px 30px 20px 60px;
+		height: 220px;
+		width: 400px;
 	}
 }
 .carouselText{
-	grid-column: 2;
-	padding: 75px 60px 5px 30px;
-	height: 240px;
+	grid-column: 1;
+	grid-row: 2;
+	height: 145px;
+	padding: 0px 50px 5px;
 }
-@media(max-width: 850px){
+@media(min-width: 768px){
 	.carouselText{
-		grid-column: 1;
-		grid-row: 2;
-		height: 70px;
-		padding: 0px 50px 5px;
+		grid-column: 2;
+		grid-row: 1;
+		padding: 30px 60px 5px 30px;
+		font-size: 
 	}
 }
 #rightarrow{
@@ -162,9 +180,6 @@ button{
 }
 #leftarrow:hover, #rightarrow:hover {
   color: black;
-}
-.hidden{
-	display: none;
 }
 #dots{
 	text-align: center;
@@ -184,6 +199,9 @@ button{
 .active, .dot:hover {
   	background-color: black;
 }
+.hidden{
+	display: none;
+}
 
 footer{
 	position: absolute;
@@ -192,7 +210,12 @@ footer{
 	opacity: 0.95;
 }
 footer, #footer{
-	height: 100px;
+	height: 75px;
+}
+@media(min-width: 768px){
+	footer, #footer{
+		height: 100px;
+	}
 }
 .footer{
 	grid-column: 1 / 3;
